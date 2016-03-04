@@ -1,0 +1,33 @@
+<head><script src="js/app.js"></script></head>
+<body ng-app="app2">
+<style>.popup-container .popup {width:100%}</style>
+<ion-view title='<img class="title-image" src="img/logo2.png" height="100%"/>'>
+<ion-content class="homec padding" ng-controller="app2"  data-ng-init="init('finearts')">
+<div class="list card">
+  <div class="item item-image">
+    <img src="img/finearts2.png">
+  </div>
+</div>
+<div ng-repeat="(key,pevent) in data">
+	<div class="card">
+		<div class="item item-divider">
+			<center>{{pevent.title}}</center>
+		</div>
+		<ion-list class="list" ng-repeat="event in pevent.events">
+			<ion-item class="item" ng-click="showInfo('{{key}}',{{$index}})">
+			  <h2>{{event.title}}</h2><br/>
+			</ion-item>
+		</ion-list>
+	</div>
+</div>
+
+
+For any query, Contact-
+<ion-item class="item">
+  <h2>Randeep Singh</h2>
+  <p>Cultural Coordinator</p>
+  <p>+91-8896613474</p><p>khinda.randeephardev@gmail.com </p>
+</ion-item>
+</ion-content>
+</ion-view>
+</body>

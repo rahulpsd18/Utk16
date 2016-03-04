@@ -1,0 +1,18 @@
+<head><script src="js/app.js"></script></head>
+<body ng-app="app">
+<ion-view title='<img class="title-image" src="img/logo2.png" height="100%"/>'>
+<ion-content ng-controller="announcementCtrl" class="padding" style="background-color: transparent; font-family:karla;">
+
+  <ion-list class="list" style="background-color: transparent;" ng-repeat="(key,item) in data">
+          <ion-item class="item ">
+          
+          <a browse-to="{{item.link}}">
+            <h2>{{item.title}}</h2>
+            <p>{{item.summary}}</p>
+          </a>
+
+          </ion-item>
+        </ion-list>
+</ion-content>
+</ion-view>
+</body>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="app">
+
+    <ion-side-menus>
+    <ion-side-menu-content>
+      <ion-nav-bar class="bar-dark my-bar">
+        <ion-nav-buttons side="left">
+          <button menu-toggle="left" class="button button-icon button-clear ion-navicon"></button>
+        </ion-nav-buttons>
+        <!-- <ion-nav-buttons side="right">
+          <button menu-toggle="right" class="button button-icon button-clear ion-ios-help-outline"></button>
+        </ion-nav-buttons> -->
+        <ion-nav-back-button></ion-nav-back-button>
+      </ion-nav-bar>
+      <ion-nav-view name="tab-home"></ion-nav-view>
+      <!-- <ion-tabs>
+        <ion-tab title="Home" href="#/home">
+                <ion-nav-view name="tab-home"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Different" href="#/different">
+                <ion-nav-view name="tab-different"></ion-nav-view>
+        </ion-tab>
+      </ion-tabs> -->
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+      <ion-content ng-controller="shareCtrl" class="mymenu" style="font-family:karla;">
+        <ion-list class="trans">
+          <ion-item menu-close href="#/home">Home</ion-item>          
+          <ion-item menu-close href="#/about" class="item assertive">About Utkarsh</ion-item>
+          <ion-item menu-close href="#/cultural" style="padding-left:15px">Cultural Events</ion-item>
+          <ion-item menu-close href="#/technical" style="padding-left:15px">Technical Events</ion-item>
+          <ion-item menu-close href="#/literary" style="padding-left:15px">Literary Events</ion-item>
+          <ion-item menu-close href="#/finearts" style="padding-left:15px">Fine Arts Events</ion-item>
+          <ion-item menu-close href="#/informal" style="padding-left:15px">Informal Events</ion-item>
+          <ion-item menu-close href="#/sports" style="padding-left:15px">Sports Events</ion-item>
+          <br>
+          <ion-item menu-close href="#/announcement" class="item assertive item-icon-right"><i class="icon ion-speakerphone"></i>Announcement</ion-item>
+          <ion-item menu-close href="#/livefeed" class="item assertive item-icon-right"><i class="icon ion-images"></i>Live Feed</ion-item>
+          <ion-item menu-close href="#/team" class="assertive item-icon-right"><i class="icon ion-ios-people"></i>Meet the Team</ion-item>
+          <ion-item menu-close href="#/developer" class="assertive item-icon-right"><i class="icon ion-email"></i>Contact Developer</ion-item>
+          <ion-item menu-close ng-click="OtherShare()" class="assertive item-icon-right"><i class="icon ion-android-share-alt"></i>Share this app</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+    <!-- <ion-side-menu side="right">
+      <ion-header-bar class="bar-calm">
+        <h1 class="title">Blank</h1>
+      </ion-header-bar>
+      <ion-content class="padding">
+        No Idea
+      </ion-content>
+    </ion-side-menu> -->
+  </ion-side-menus>
+  </body>
+</html>
