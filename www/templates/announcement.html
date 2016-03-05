@@ -4,15 +4,12 @@
 <ion-content ng-controller="announcementCtrl" class="padding" style="background-color: transparent; font-family:karla;">
 
   <ion-list class="list" style="background-color: transparent;" ng-repeat="(key,item) in data">
-          <ion-item class="item ">
-          
-          <a browse-to="{{item.link}}">
-            <h2>{{item.title}}</h2>
-            <p>{{item.summary}}</p>
-          </a>
+    <ion-item class="item " ng-click="window.open('{{item.link}}', '_system','location=yes'); return false; ">
 
-          </ion-item>
-        </ion-list>
+        <h2 >{{item.title}}</h2>
+        <p>{{item.summary}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>
 </ion-view>
 </body>

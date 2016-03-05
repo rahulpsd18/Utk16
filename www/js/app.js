@@ -4,25 +4,25 @@ String.prototype.replaceAll = function(search, replacement) {
     return target.replace(new RegExp(search, 'g'), replacement);
 };
 
-var app = angular.module('app', ['ionic','ngCordova']);
+var app = angular.module('app', ['ionic','ngCordova','btford.socket-io']);
+app.factory('socket',function(socketFactory){
+  //Create socket and connect to http://chat.socket.io
+  var myIoSocket = io.connect('http://utkarsh.areaxi.com');
 
+  mySocket = socketFactory({
+    ioSocket: myIoSocket
+  });
 
-app.directive('browseTo', function ($ionicGesture) {
- return {
-  restrict: 'A',
-  link: function ($scope, $element, $attrs) {
-   var handleTap = function (e) {
-    // todo: capture Google Analytics here
-    var inAppBrowser = window.open(encodeURI($attrs.browseTo), '_system');
-   };
-   var tapGesture = $ionicGesture.on('tap', handleTap, $element);
-   $scope.$on('$destroy', function () {
-    // Clean up - unbind drag gesture handler
-    $ionicGesture.off(tapGesture, 'tap', handleTap);
-   });
-  }
- }
+  return mySocket;
 });
+
+app.filter('reverse', function() {
+  return function(items) {
+    return items.slice().reverse();
+  };
+});
+
+
 app.config(function($stateProvider, $urlRouterProvider){
 
   $stateProvider.state('home', {
@@ -42,15 +42,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       }
     }
   });
-
-  $stateProvider.state('technical', {
-    url: '/technical',
-    views: {
-      'tab-home':{
-        templateUrl: 'templates/technical.html'
-      }
-    }
-  });
+  $stateProvider.state('technical', {url: '/technical',views: {'tab-home':{templateUrl: 'templates/technical.html'}}});
 
   $stateProvider.state('literary', {
     url: '/literary',
@@ -176,10 +168,10 @@ app.controller('app2', function($scope, $ionicPopup,$http) {
          subTitle:ev['title']
       });
    };
-   
+
    $scope.init = function(name){
-    
-     $http.get('js/data/'+name+'.json').success(function(response){ 
+
+     $http.get('js/data/'+name+'.json').success(function(response){
       $scope.data = response;
     });
    }
@@ -191,13 +183,26 @@ app.controller("shareCtrl", function($scope, $cordovaSocialSharing) {
     $scope.OtherShare=function(){
      window.plugins.socialsharing.share('Check out this cool app I\'m using called Utkarsh\'16 for ' + device.platform, null, null, '. Link:---');
   }
+    $scope.ImgShare=function(text,image_thumb,link){
+     window.plugins.socialsharing.share('Check out this cool image about ' + text +'.', null, image_thumb, 'Link:'+link);
+  }
 });
 
 app.controller("announcementCtrl", function($scope,$http) {
   $scope.data = {};
-    $http.get('js/feeds.json').success(function(response){ 
+    $http.get('js/feeds.json').success(function(response){
       $scope.data = response;
     });
+});
+
+app.controller("liveFeedCtrl", function($scope,$http,socket) {
+  $scope.data = [];
+  socket.on('news', function (data) {
+    $scope.data.push(data);
+  });
+  $http.get('http://utkarsh.areaxi.com/trending/feeds.php').success(function(response){
+   $scope.data = response;
+  });
 });
 
 
@@ -208,72 +213,29 @@ app.controller("ExampleController", function($scope, $ionicSlideBoxDelegate) {
 });
 
 
-// app.run(function($ionicPlatform, $ionicPopup) {
-//   // Disable BACK button on home
-//   $ionicPlatform.registerBackButtonAction(function(event) {
-//     if (true) { // your check here
-//       $ionicPopup.confirm({
-//         title: 'Exit warning',
-//         template: 'Are you sure you want to exit?'
-//       }).then(function(res) {
-//         if (res) {
-//           ionic.Platform.exitApp();
-//         }
-//       })
-//     }
-//   }, 100);
-// });
 app.run(function($ionicPlatform, $ionicPopup) {
-$ionicPlatform.registerBackButtonAction(function (event) {
-                    event.preventDefault();
-            }, 100);
+  // Disable BACK button on home
+  $ionicPlatform.registerBackButtonAction(function(event) {
+    if (true) { // your check here
+      $ionicPopup.confirm({
+        title: 'Exit warning',
+        template: 'Are you sure you want to exit?'
+      }).then(function(res) {
+        if (res) {
+          ionic.Platform.exitApp();
+        }
+      })
+    }
+  }, 100);
 });
-// app.controller('GalleryCtrl', function($scope, $ionicBackdrop, $ionicModal, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
-//
-//   $scope.allImages = [{
-//     src: 'img/bg1.jpg'
-//   }, {
-//     src: 'img/bg2.jpg'
-//   }, {
-//     src: 'img/bg3.jpg'
-//   }, {
-//     src: 'img/bg4.jpg'
-//   }, {
-//     src: 'img/bg5.jpg'
-//   }];
-//
-//   $scope.zoomMin = 1;
-//
-//
-//
-//   $scope.showImages = function(index) {
-//   $scope.activeSlide = index;
-//   $scope.showModal('templates/gallery-zoomview.html');
-// };
-//
-// $scope.showModal = function(templateUrl) {
-//   $ionicModal.fromTemplateUrl(templateUrl, {
-//     scope: $scope
-//   }).then(function(modal) {
-//     $scope.modal = modal;
-//     $scope.modal.show();
-//   });
-// }
-//
-// $scope.closeModal = function() {
-//   $scope.modal.hide();
-//   $scope.modal.remove()
-// };
-//
-// $scope.updateSlideStatus = function(slide) {
-//   var zoomFactor = $ionicScrollDelegate.$getByHandle('scrollHandle' + slide).getScrollPosition().zoom;
-//   if (zoomFactor == $scope.zoomMin) {
-//     $ionicSlideBoxDelegate.enableSlide(true);
-//   } else {
-//     $ionicSlideBoxDelegate.enableSlide(false);
+// app.run(function($ionicPlatform, $ionicPopup) {
+// $ionicPlatform.registerBackButtonAction(function (event,$ionicHistory,$state) {
+//   var v = $ionicHistory.viewHistory();
+//   if(!v.backView){
+//     $state.go('app.home');
 //   }
-// };
-//
+//   else{
+//     $ionicHistory.goBack();
+//   }
+//             }, 100);
 // });
-
-// }());

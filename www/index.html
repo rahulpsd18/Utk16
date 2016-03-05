@@ -12,6 +12,8 @@
     <script src="js/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/socket.js"></script>
+    <script src="js/socket.io.js"></script>
   </head>
   <body ng-app="app">
 
@@ -39,7 +41,7 @@
     <ion-side-menu side="left">
       <ion-content ng-controller="shareCtrl" class="mymenu" style="font-family:karla;">
         <ion-list class="trans">
-          <ion-item menu-close href="#/home">Home</ion-item>          
+          <ion-item menu-close href="#/home">Home</ion-item>
           <ion-item menu-close href="#/about" class="item assertive">About Utkarsh</ion-item>
           <ion-item menu-close href="#/cultural" style="padding-left:15px">Cultural Events</ion-item>
           <ion-item menu-close href="#/technical" style="padding-left:15px">Technical Events</ion-item>
