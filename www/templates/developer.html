@@ -1,12 +1,57 @@
 <head><script src="js/app.js"></script></head>
 <body>
 <ion-view title='<img class="title-image" src="img/logo2.png" height="100%"/>'>
-<ion-content>
-<center>
-  <!-- <img src="img/jarvis.png"><br> -->
-  <button class="button button-full button-clear button-royal">@rahulpsd18</button>
-  <!-- <i class="icon ion-ios-email-outline" style="font-size: 30px;">rahulpsd18@gmail.com</i> -->
-</center>
+<ion-content ng-controller="app2">
+<!-- <ion-list class="list" style="background-color: transparent;">
+      <ion-item class="item item-avatar item-icon-right" ng-click="showAlert('Risabh Kumar','CS BBDNITM','img/team/rahul.png','','rahulpsd18@gmail.com')">
+      <img src="img/team/rahul.png">
+        <h2>Risabh Kumar</h2>
+        <p>Application Developer</p>
+      </ion-item>
+ </ion-list> -->
+ <div class="list">
+    <a class="item item-thumbnail-left" ng-click="showAlert('Risabh Kumar','CS BBDNITM','img/team/rahul.png','','rahulpsd18@gmail.com')">
+      <img src="img/team/rahul.png"><br/>
+      <h2>Risabh Kumar</h2>
+      <p>Application Developer</p>
+    </a>
+</div>
+<br/>Special thanks to,<br/>
+ <div class="list">
+    <a class="item item-thumbnail-left" ng-click="showAlert('Yash Srivastawa','CS BBDNITM','img/team/yash.jpg','','srivastaway6@gmail.com')">
+      <img src="img/team/yash.jpg"><br/>
+      <h2>Yash Srivastawa</h2>
+      <p>Windows Application Developer</p>
+    </a>
+    <a class="item item-thumbnail-left" ng-click="showAlert('Madhurendra Sachan','CS BBDU','img/team/madhurendra.jpg','','@themadhurendra')">
+      <img src="img/team/madhurendra.jpg"><br/>
+      <h2>Madhurendra Sachan</h2>
+      <p>Helped in adding functionalities.</p>
+    </a>
+</div>
+<!-- <ion-list class="list" style="background-color: transparent;">
+      <ion-item class="item item-avatar item-icon-right" ng-click="showAlert('Yash Srivastawa','CS BBDNITM','img/team/yash.jpg','','srivastaway6@gmail.com')">
+      <img src="img/team/yash.jpg">
+        <h2>Yash Srivastawa</h2>
+        <p>Windows Application Developer</p>
+      </ion-item>
+      <ion-item class="item item-avatar item-icon-right" ng-click="showAlert('Madhurendra Sachan','CS BBDU','img/team/madhurendra.jpg','','@themadhurendra')">
+      <img src="img/team/madhurendra.jpg">
+        <h2>Madhurendra Sachan</h2>
+        <p>Helped in adding functionalities.</p>
+      </ion-item>
+ </ion-list> -->
+ <br/>
+ <ion-list class="list" style="background-color: transparent;">
+      <ion-item class="item wrap">
+        <h2>Windows app Launched.</h2>
+        <p>Download it from <a href="http://www.microsoft.com/en-in/store/apps/utkarsh16/9nblggh4qjbm">here.</a></p>
+      </ion-item>
+      <ion-item class="item wrap">
+        <h2><a href="http://2016.bbd-utkarsh.org">2016.bbd-utkarsh.org</a></h2>
+        <p>Dont forget to visit the official website of Utkarsh'16.</p>
+      </ion-item>
+ </ion-list>
   <!-- <iframe src="https://docs.google.com/forms/d/1rPPuh3z7twYxQBRRdKJ5rk9Ss3XmTbcsX8ZHbPaK_4s/viewform?embedded=true" width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
 </ion-content>
 </ion-view>

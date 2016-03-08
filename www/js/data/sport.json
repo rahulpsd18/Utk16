@@ -1,1 +1,133 @@
-{"outdoor":{"title":"Outdoor Games","img":"Sports\/outdoor.jpg","card_image":"3.jpg","events":[{"img":"Sports\/outdoor\/football.jpg","title":"Football","menu":[{"title":"Event Rules","content":"(a) Maximum No. of players allowed in a team is 15.\n(b) Rules:\n  (i)  Normal FIFA rules apply.\n  (ii)  Offside etc. as per current format.\n  (iii) Max. Three substitutes allowed.\n  (iv) Extra time for knockout stages will be notified only before the match."}]},{"img":"Sports\/outdoor\/volley.jpg","title":"Volleyball","menu":[{"title":"Event Rules","content":"(a) Maximum no. of players: 12 (girls & boys)\n(b) Type of tournament- League, Pool or knockout, depending on the number of teams.\n(c) With proper kit. "}]},{"img":"Sports\/outdoor\/basketball.jpg","title":"Basketball","menu":[{"title":"Event Rules","content":"(a) Rules (i) FIBA rules are applicable.\n(ii) 10 minutes each quarter with 2 minutes break between the quarters and 5 minutes at half time.\n(iii) Teams should report to basket ball court half an hour before their match.\n(iv) All the players of the team should have same color of jersey with printed numbers.\n(v) Maximum 12 players are allowed in a team.\n(vi) No players should have anything on his\/her hand or neck (wrist watch, necklace, ring, kada, bracelet, etc).\nJewellery of any kind is not allowed and nails have to be properly cut"}]},{"img":"Sports\/outdoor\/kab.jpg","title":"Kabaddi","menu":[{"title":"Event Rules","content":"(a) Maximum no. of players \u2013 7 (boys)\n(b) Type of tournament \u2013 knock out basis.\n(c) International rules.\n(d) With proper kit."}]},{"img":"Sports\/outdoor\/tennis.jpg","title":"Lawn Tennis","menu":[{"title":"Event Rules","content":"(a) Boys & Girls\n(b) Events: Singles and team (no. of players \u2013 5 boys and 5 girls)\n(c) Rules\n(i) Format of play \u2013 Singles (open), Team set.\n(ii) Latest Davis Cup Pattern will be followed.\n(iii) Maximum allowed players will be five for boys and five girls or a combination team of three boys and two girls would be allowed"}]}]},"indoor":{"title":"Indoor Games","img":"Sports\/indoor.jpg","card_image":"1.jpg","events":[{"img":"Sports\/Indoor\/baddyu.jpg","title":"Badminton","menu":[{"title":"Event Rules","content":"(a) Events: Singles, Doubles, Mixed.\n(b) Rules\n(i) Teams for every game are submitted before the match (specifying who will be playing 1st singles, doubles and 2nd singles).\n(ii) This team can not be changed after submission. Latest IBF rules will be followed.\n(iii) Maximum permitted players will be 5 for boys and 5 for girls each or a combination tram of 3 boys and 2 girls would be allowed.\n(iv) 1 player can play in 2 matched only (1 singles and 1 doubles)"}]},{"img":"Sports\/Indoor\/tt.jpg","title":"Table Tennis","menu":[{"title":"Event Rules","content":"(a) Boys Team (Rules)\n(i) Format of Play: singles( A vs X), singles (B vs Y), doubles and reverse singles (A vs Y & B vs X)\n(ii) All games will be best of 5.\n(iii) Players playing singles wont be allowed to repeat in doubles.\n(iv) Maximum participants allowed per college would be 3 boy and 3 girls.\n\n(b) Girls Team (Rules)\n(i) Format of play: singles (A vs X), singles (B vs Y), doubles and reverse singles(A vs Y & B vs X).\n(ii) All games would be best of 3."}]},{"img":"Sports\/Indoor\/Chess.jpg","title":"Chess","menu":[{"title":"Event Rules","content":" (a) Events: Classical (mixed), Problem solving (mixed).\n(b) Rules: Limit on number of players:\n(i) Classical: 5 (4 + 1 reserve)\n(ii) Lightning: 5 (4 + 1 reserve)\n(iii)  Problem Solving: "}]},{"img":"Sports\/Indoor\/C1.jpg","title":"Carrom","menu":[{"title":"Event Rules","content":"(a) Rules\n(i) Standard carom rules apply.\n(ii) An individual can participate in not more than 1 singles and 1 doubles match.\n(iii) Each game comprises of 4 players only.\n(iv) A game shall be of 25 points or 8 boards. The player\/team who reaches\n25 points first or leads at the conclusion of the 8 boards shall be the winner of the game.\n(v) The participants will be made familiar with the rules before the start of the tournament.\n(vi) Any hand may be used in play. Participants can change hand during the game.\n(vii) In case of any conflict, decision of the organizing committee will be final."}]}]},"athletics":{"card_image":"Sports\/Athelitcs\/bd.jpg","title":"Athletics","menu":[{"title":"Rules","content":"(i) For 100m, 200m, 400m, 800m races, there would be heats followed by finals.\n(ii) All other races, throws and jumps will have finals directly and results will be based on timings.\n(iii) Maximum Two participants are allowed from each college in any athletics event (excluding relays).\n(iv) 500m are for boys only and other heats, throws and jumps are for both boys and girls."}],"img":"Sports\/Athelitcs\/tracks.jpg"},"schedule":{"title":"Schedule","img":"texture\/1.jpg","card_image":"schedule.png","menu":[{"title":"Schedule","content":"<img width=\"100%\" src=\"img\/schedules\/sports1.jpg\"><img width=\"100%\" src=\"img\/schedules\/sports2.jpg\">"}]}}
+{
+  "outdoor": {
+    "title": "Outdoor Games",
+    "img": "Sports/outdoor.jpg",
+    "card_image": "3.jpg",
+    "events": [
+      {
+        "img": "Sports/outdoor/football.jpg",
+        "title": "Football",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": "(a) Maximum No. of players allowed in a team is 15.\n(b) Rules:\n  (i)  Normal FIFA rules apply.\n  (ii)  Offside etc. as per current format.\n  (iii) Max. Three substitutes allowed.\n  (iv) Extra time for knockout stages will be notified only before the match."
+          }
+        ]
+      },
+      {
+        "img": "Sports/outdoor/volley.jpg",
+        "title": "Volleyball",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": "(a) Maximum no. of players: 12 (girls & boys)\n(b) Type of tournament- League, Pool or knockout, depending on the number of teams.\n(c) With proper kit. "
+          }
+        ]
+      },
+      {
+        "img": "Sports/outdoor/basketball.jpg",
+        "title": "Basketball",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": "(a) Rules (i) FIBA rules are applicable.\n(ii) 10 minutes each quarter with 2 minutes break between the quarters and 5 minutes at half time.\n(iii) Teams should report to basket ball court half an hour before their match.\n(iv) All the players of the team should have same color of jersey with printed numbers.\n(v) Maximum 12 players are allowed in a team.\n(vi) No players should have anything on his/her hand or neck (wrist watch, necklace, ring, kada, bracelet, etc).\nJewellery of any kind is not allowed and nails have to be properly cut"
+          }
+        ]
+      },
+      {
+        "img": "Sports/outdoor/kab.jpg",
+        "title": "Kabaddi",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": "(a) Maximum no. of players – 7 (boys)\n(b) Type of tournament – knock out basis.\n(c) International rules.\n(d) With proper kit."
+          }
+        ]
+      },
+      {
+        "img": "Sports/outdoor/tennis.jpg",
+        "title": "Lawn Tennis",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": "(a) Boys & Girls\n(b) Events: Singles and team (no. of players – 5 boys and 5 girls)\n(c) Rules\n(i) Format of play – Singles (open), Team set.\n(ii) Latest Davis Cup Pattern will be followed.\n(iii) Maximum allowed players will be five for boys and five girls or a combination team of three boys and two girls would be allowed"
+          }
+        ]
+      }
+    ]
+  },
+  "indoor": {
+    "title": "Indoor Games",
+    "img": "Sports/indoor.jpg",
+    "card_image": "1.jpg",
+    "events": [
+      {
+        "img": "Sports/Indoor/baddyu.jpg",
+        "title": "Badminton",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": "(a) Events: Singles, Doubles, Mixed.\n(b) Rules\n(i) Teams for every game are submitted before the match (specifying who will be playing 1st singles, doubles and 2nd singles).\n(ii) This team can not be changed after submission. Latest IBF rules will be followed.\n(iii) Maximum permitted players will be 5 for boys and 5 for girls each or a combination tram of 3 boys and 2 girls would be allowed.\n(iv) 1 player can play in 2 matched only (1 singles and 1 doubles)"
+          }
+        ]
+      },
+      {
+        "img": "Sports/Indoor/tt.jpg",
+        "title": "Table Tennis",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": "(a) Boys Team (Rules)\n(i) Format of Play: singles( A vs X), singles (B vs Y), doubles and reverse singles (A vs Y & B vs X)\n(ii) All games will be best of 5.\n(iii) Players playing singles wont be allowed to repeat in doubles.\n(iv) Maximum participants allowed per college would be 3 boy and 3 girls.\n\n(b) Girls Team (Rules)\n(i) Format of play: singles (A vs X), singles (B vs Y), doubles and reverse singles(A vs Y & B vs X).\n(ii) All games would be best of 3."
+          }
+        ]
+      },
+      {
+        "img": "Sports/Indoor/Chess.jpg",
+        "title": "Chess",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": " (a) Events: Classical (mixed), Problem solving (mixed).\n(b) Rules: Limit on number of players:\n(i) Classical: 5 (4 + 1 reserve)\n(ii) Lightning: 5 (4 + 1 reserve)\n(iii)  Problem Solving: "
+          }
+        ]
+      },
+      {
+        "img": "Sports/Indoor/C1.jpg",
+        "title": "Carrom",
+        "menu": [
+          {
+            "title": "Event Rules",
+            "content": "(a) Rules\n(i) Standard carom rules apply.\n(ii) An individual can participate in not more than 1 singles and 1 doubles match.\n(iii) Each game comprises of 4 players only.\n(iv) A game shall be of 25 points or 8 boards. The player/team who reaches\n25 points first or leads at the conclusion of the 8 boards shall be the winner of the game.\n(v) The participants will be made familiar with the rules before the start of the tournament.\n(vi) Any hand may be used in play. Participants can change hand during the game.\n(vii) In case of any conflict, decision of the organizing committee will be final."
+          }
+        ]
+      }
+    ]
+  },
+  "athletics": {
+    "card_image": "Sports/Athelitcs/bd.jpg",
+    "title": "Athletics",
+    "events": [
+      {
+        "title": "Rules",
+        "menu": [
+          {
+            "title": "Rules",
+            "content": "(i) For 100m, 200m, 400m, 800m races, there would be heats followed by finals.\n(ii) All other races, throws and jumps will have finals directly and results will be based on timings.\n(iii) Maximum Two participants are allowed from each college in any athletics event (excluding relays).\n(iv) 500m are for boys only and other heats, throws and jumps are for both boys and girls."
+          }
+        ]
+      }
+    ],
+    "img": "Sports/Athelitcs/tracks.jpg"
+  },
+  "schedule": {
+    "title": "Schedule",
+    "img": "texture/1.jpg",
+    "card_image": "schedule.png",
+    "menu": [
+      {
+        "title": "Schedule",
+        "content": "<img width=\"100%\" src=\"img/schedules/sports1.jpg\"><img width=\"100%\" src=\"img/schedules/sports2.jpg\">"
+      }
+    ]
+  }
+}

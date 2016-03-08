@@ -34,6 +34,16 @@ app.config(function($stateProvider, $urlRouterProvider){
     }
   });
 
+  $stateProvider.state('schedule', {
+          url: '/schedule',
+          views: {
+            'tab-home':{
+              templateUrl: 'templates/schedule.html'
+            }
+          }
+
+        });
+
   $stateProvider.state('cultural', {
     url: '/cultural',
     views: {
@@ -173,6 +183,7 @@ app.controller('app2', function($scope, $ionicPopup,$http) {
 
      $http.get('js/data/'+name+'.json').success(function(response){
       $scope.data = response;
+      delete  $scope.data['schedule'];
     });
    }
 });
@@ -181,7 +192,7 @@ app.controller('app2', function($scope, $ionicPopup,$http) {
 
 app.controller("shareCtrl", function($scope, $cordovaSocialSharing) {
     $scope.OtherShare=function(){
-     window.plugins.socialsharing.share('Check out this cool app I\'m using called Utkarsh\'16 for ' + device.platform, null, null, '. Link:---');
+     window.plugins.socialsharing.share('Check out this cool app I\'m using called Utkarsh\'16 for ' + device.platform + '.', null, null, 'https://play.google.com/store/apps/details?id=com.rahulpsd18.utkarsh214877');
   }
     $scope.ImgShare=function(text,image_thumb,link){
      window.plugins.socialsharing.share('Check out this cool image about ' + text +'.', null, image_thumb, 'Link:'+link);
